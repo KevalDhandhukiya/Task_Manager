@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables — NEVER commit these
+.env
+server/.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# One-time scripts — should not be in repo
+server/cleanup_prod.js
+server/cleanup_for_production.sql
+server/repair_passwords.js
+
+# Zip files
+*.zip
+
+# Vite cache
+.vite/

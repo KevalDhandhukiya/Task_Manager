@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 0% 0%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
+    --radius: 0.5rem;
+    --chart-1: 0 0% 0%;
+    --chart-2: 0 0% 20%;
+    --chart-3: 0 0% 40%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 0 0% 80%;
+    
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 226 100% 97%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 220 10% 90%;
+    --sidebar-ring: 0 0% 0%;
+    
+    /* Cronabit Custom Colors */
+    --cronabit-primary: #000000;
+    --cronabit-primary-light: #1a1a1a;
+    --cronabit-primary-dark: #000000;
+    --cronabit-accent: #000000;
+    --cronabit-accent-light: #f3f4f6;
+    --cronabit-warning: #F59E0B;
+    --cronabit-warning-light: #FEF3C7;
+    --cronabat-danger: #EF4444;
+    --cronabit-danger-light: #FEE2E2;
+    --cronabit-info: #3B82F6;
+    --cronabit-info-light: #DBEAFE;
+    --cronabit-gray-50: #fcfcfc;
+    --cronabit-gray-100: #f2f2f2;
+    --cronabit-gray-200: #e5e5e5;
+    --cronabit-gray-300: #b3b3b3;
+    --cronabit-gray-400: #000000;
+    --cronabit-gray-500: #000000;
+    --cronabit-gray-600: #000000;
+    --cronabit-gray-700: #000000;
+    --cronabit-gray-800: #000000;
+    --cronabit-gray-900: #000000;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 98%;
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 0 0% 100%;
+    
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border tracking-[-0.01em];
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  body {
+    @apply bg-background text-[#2A2E34] antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-[-0.01em] font-semibold text-[#2A2E34];
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cronabit-gray-300) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--cronabit-gray-300);
+    border-radius: 3px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: var(--cronabit-gray-400);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.animate-slide-out-right {
+  animation: slideOutRight 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* ClickUp Style Tokens */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.premium-card {
+  @apply bg-white border border-gray-100/50 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] rounded-xl;
+}
+
+.sidebar-item-clickup {
+  @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-gray-600;
+}
+
+.sidebar-item-active-clickup {
+  @apply bg-black/5 text-black border-r-4 border-black rounded-r-none rounded-l-lg shadow-sm;
+}
+
+.status-accent-todo { border-left: 4px solid #9CA3AF; }
+.status-accent-in-progress { border-left: 4px solid #000000; }
+.status-accent-testing { border-left: 4px solid #A855F7; }
+.status-accent-done { border-left: 4px solid #6366F1; }
+
+.clickup-badge {
+  @apply text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full;
+}
+
+.hover-lift {
+  @apply transition-none;
+}
+
+/* Tactical Prose: Enforce mission-critical bullets */
+.tactical-prose ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.tactical-prose li {
+  display: list-item !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.tactical-prose h1, .tactical-prose h2, .tactical-prose h3 {
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+  font-weight: 700 !important;
+}
+
+.tactical-prose a {
+  @apply text-blue-600 underline hover:text-blue-800 transition-colors cursor-pointer;
+  text-decoration: underline !important;
+}
+
+.tactical-prose strong {
+  @apply font-bold text-black;
+}
