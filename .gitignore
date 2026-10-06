@@ -26,3 +26,6 @@ server/repair_passwords.js
 
 # Vite cache
 .vite/
+
+# User uploads
+server/uploads/
